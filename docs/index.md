@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+---
+title: Comparing Image Clustering/Classification performance between Supervised and Unsupervised Learning models using Dog Breed Image dataset
+---
+## Introduction and Background
 
-You can use the [editor on GitHub](https://github.com/unkemptArc99/unkemptArc99.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Our project revolves around identifying the breeds of dogs in images. There will be two aspects to the project: classifying dog breeds with an input image using a neural network, and using unsupervised learning algorithms to cluster dogs based on image features. The former project already can be done well provided there is sufficient training data, but a main goal of ours is to create a unique algorithm in the latter part that is comparable to the supervised learning algorithm. Our dataset contains images of multiple dog breeds, along with their corresponding breed and if they were originally used as training data, testing data, or validation data.
+## Problem Definition
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The purpose of this project is to investigate the effectiveness of methods we are learning in class with classifying dog breeds. In particular, we wish to compare standard supervised methods in their accuracy and efficiency to unsupervised methods relying on feature creation using the input images.
 
-### Markdown
+## Datasets
+1. [70 Dog Breeds Image dataset from Kaggle](https://www.kaggle.com/gpiosenka/70-dog-breedsimage-data-set)
+2. [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Methods
 
-```markdown
-Syntax highlighted code block
+### Supervised Learning
+We are planning to construct a convolutional neural network to classify dogs into different breeds. Since we are working with multiple datasets, we will have to homogenize them by using OpenCV to bring all the images to the same dimensions. We will experiment with different numbers of layers for the neural network, different epoch sizes, and with splitting data into different percentages for testing and training. Depending on whether the accuracy and F1 score of the model is adequately high, we will experiment with data augmentation (such as reflections and different degrees of rotation). Then, we will be using transfer learning with pre-trained models (such as VGG, GoogLeNet, and Residual Network) to improve our results even further and compare results.
 
-# Header 1
-## Header 2
-### Header 3
+### Unsupervised Learning
+Our objective is to create an unsupervised algorithm to cluster images of different breeds of dogs with either a binary assignment (in a particular class or not), or with at least a specific probability. With this goal in mind, we are thinking of exploring a unique unsupervised way that can help us cluster similar dog breeds together. We will be evaluating the performance by measuring the error in clustering a certain breed of dog with a group that consists of dogs from another breed.
+The following is our proposed plan for applying unsupervised learning -
+![Unsupervised Learning Flow](img/UnsupervisedFlow.jpg)
 
-- Bulleted
-- List
+At this moment, the key things for us to decide are the Feature Extraction algorithm and the Distance/Similarity function that will be used in the unsupervised algorithm. We plan to experiment with multiple unsupervised algorithms to settle upon the algorithm which gives us the highest accuracy. The project will revolve around these key decisions and choosing parameters.
 
-1. Numbered
-2. List
+## Potential Results
+A supervised (like neural networks) and unsupervised (like K-means, GMM or DB-Scan) model that can detect a breed given an image of a dog. We will evaluate and compare the performance of both results.
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/unkemptArc99/unkemptArc99.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Discussion
+There have been many supervised models which perform animal species classification including dog breed classification. But can we use an unsupervised algorithm to cluster similar dog breeds? The goal of this project is not only constrained to develop a well-performing supervised model but we also plan to apply an unsupervised model that performs comparatively equal to or higher than the classification model. We plan to start with detecting dog breeds and then extend the scope of our project to other image classification problems.
