@@ -15,10 +15,10 @@ The purpose of this project is to investigate the effectiveness of methods we ar
 ## Methods
 
 ### Supervised Learning
-We are planning to construct a convolutional neural network to classify dogs into different breeds. Since we are working with multiple datasets, we will have to homogenize them by using OpenCV to bring all the images to the same dimensions. We will experiment with different numbers of layers for the neural network, different epoch sizes, and with splitting data into different percentages for testing and training. Depending on whether the accuracy and F1 score of the model is adequately high, we will experiment with data augmentation (such as reflections and different degrees of rotation). Then, we will be using transfer learning with pre-trained models (such as VGG, GoogLeNet, and Residual Network) to improve our results even further and compare results.
+We are planning to construct a convolutional neural network to classify dogs into different breeds[1]. Since we are working with multiple datasets, we will have to homogenize them by using OpenCV to bring all the images to the same dimensions. We will experiment with different numbers of layers for the neural network, different epoch sizes, and with splitting data into different percentages for testing and training. Depending on whether the accuracy and F1 score of the model is adequately high, we will experiment with data augmentation (such as reflections and different degrees of rotation). Then, we will be using transfer learning with pre-trained models (such as VGG, GoogLeNet, and Residual Network) to improve our results even further and compare results.
 
 ### Unsupervised Learning
-Our objective is to create an unsupervised algorithm to cluster images of different breeds of dogs with either a binary assignment (in a particular class or not), or with at least a specific probability. With this goal in mind, we are thinking of exploring a unique unsupervised way that can help us cluster similar dog breeds together. We will be evaluating the performance by measuring the error in clustering a certain breed of dog with a group that consists of dogs from another breed.
+Our objective is to create an unsupervised algorithm to cluster images of different breeds of dogs with either a binary assignment (in a particular class or not), or with at least a specific probability[2][3][4][5]. With this goal in mind, we are thinking of exploring a unique unsupervised way that can help us cluster similar dog breeds together. We will be evaluating the performance by measuring the error in clustering a certain breed of dog with a group that consists of dogs from another breed.
 The following is our proposed plan for applying unsupervised learning -
 ![Unsupervised Learning Flow](img/UnsupervisedFlow.jpg)
 
@@ -29,3 +29,18 @@ A supervised (like neural networks) and unsupervised (like K-means, GMM or DB-Sc
 
 ## Discussion
 There have been many supervised models which perform animal species classification including dog breed classification. But can we use an unsupervised algorithm to cluster similar dog breeds? The goal of this project is not only constrained to develop a well-performing supervised model but we also plan to apply an unsupervised model that performs comparatively equal to or higher than the classification model. We plan to start with detecting dog breeds and then extend the scope of our project to other image classification problems.
+
+## Proposal Video
+
+## Timeline
+
+## References
+[1] K. Lai, X. Tu and S. Yanushkevich, "Dog Identification using Soft Biometrics and Neural Networks," 2019 International Joint Conference on Neural Networks (IJCNN), 2019, pp. 1-8, doi: 10.1109/IJCNN.2019.8851971.
+
+[2] W. Gansbeke, S. Vandenhende, S. Georgoulis, M. Proesmans, and L. Gool, "Scan: Learning to classify images without labels," ECCV, 2020, [Paper link](https://arxiv.org/pdf/2005.12320v2.pdf)
+
+[3] N. Manohar, Y. H. Sharath Kumar and G. H. Kumar, "Supervised and unsupervised learning in animal classification," 2016 International Conference on Advances in Computing, Communications and Informatics (ICACCI), 2016, pp. 156-161, doi: 10.1109/ICACCI.2016.7732040.
+
+[4] [Unsupervised learning for investigating animal behaviors?](https://medium.com/@ahsu2/unsupervised-learning-for-investigating-animal-behaviors-90ab645e8098)
+
+[5] Huang, Jiabo, Qi Dong, Shaogang Gong, and Xiatian Zhu. "Unsupervised deep learning by neighbourhood discovery." In International Conference on Machine Learning, pp. 2849-2858. PMLR, 2019., [Paper link](https://arxiv.org/abs/1904.11567)
