@@ -33,6 +33,7 @@ There have been many supervised models which perform animal species classificati
 ## Proposal Video
 
 ## Timeline
+[Project Timeline Gantt Chart](https://gtvault-my.sharepoint.com/:x:/g/personal/asharma756_gatech_edu/EWeFmqKgCDpAuTOJQFyzZCABwqLe4j8Rri51ZMPjlnRcjA?e=6M20xI)
 
 ## References
 [1] K. Lai, X. Tu and S. Yanushkevich, "Dog Identification using Soft Biometrics and Neural Networks," 2019 International Joint Conference on Neural Networks (IJCNN), 2019, pp. 1-8, doi: 10.1109/IJCNN.2019.8851971.
