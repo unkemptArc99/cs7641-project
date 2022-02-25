@@ -1,5 +1,6 @@
 ---
 title: Comparing Image Clustering/Classification performance between Supervised and Unsupervised Learning models using Dog Breed Image dataset
+youtubeId: aQi4CUArJYM
 ---
 ## Introduction and Background
 
@@ -31,6 +32,8 @@ A supervised (like neural networks) and unsupervised (like K-means, GMM or DB-Sc
 There have been many supervised models which perform animal species classification including dog breed classification. But can we use an unsupervised algorithm to cluster similar dog breeds? The goal of this project is not only constrained to develop a well-performing supervised model but we also plan to apply an unsupervised model that performs comparatively equal to or higher than the classification model. We plan to start with detecting dog breeds and then extend the scope of our project to other image classification problems.
 
 ## Proposal Video
+
+{% include youtubePlayer.html id=page.youtubeId %}
 
 ## Timeline
 [Project Timeline Gantt Chart](https://gtvault-my.sharepoint.com/:x:/g/personal/asharma756_gatech_edu/EWeFmqKgCDpAuTOJQFyzZCABwqLe4j8Rri51ZMPjlnRcjA?e=6M20xI)
