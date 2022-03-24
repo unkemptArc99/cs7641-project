@@ -1,0 +1,12 @@
+name: ml_project
+channels:
+- defaults
+dependencies:
+- matplotlib
+- numpy
+- notebook
+- jupyterlab
+- Pillow
+- opencv
+- scikit-learn
+- scikit-image
