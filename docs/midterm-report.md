@@ -14,6 +14,7 @@ title: Comparing Image Clustering/Classification performance between Supervised 
 ## Supervised Learning Models
 Methods 
 describe cnns and do calculations for number of parameters
+
 Results and Discussion 
 
 All groups should have their dataset cleaned at this point (justification for why we didnt need cleaning)
