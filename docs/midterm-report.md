@@ -36,12 +36,17 @@ The initial image dimensions were 224x224x3. With these images, we first constru
 #### Results and Discussion 
 To preprocess our data, we used OpenCV. Once we figured out that the optimal number of layers was four, we resized the images to different dimensions to see which would give the best results. We also needed to perform one hot encoding before feeding the data into the model. We found that scaling down the images by a factor of 0.4 increased our accuracy to ~47% before starting to over-fit.
 The metrics used to evaluate the model are:
+
 Accuracy = TP+TN/TP+FP+FN+TN
+
 Precision = TP/TP+FP
+
 Recall = TP/TP+FN
+
 F1 Score = 2*(Recall * Precision) / (Recall + Precision)
+
 Where TP = True positives, FP = false positives, FN = false negatives, TN = true negatives.
-These metrics are shown below.
+These metrics for our model are shown below.
 
 The next step will be to read about different transfer learning models and evaluate which one will be best for our application.
 
