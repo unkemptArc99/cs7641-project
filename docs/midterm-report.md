@@ -31,7 +31,7 @@ Activation functions are used to either activate or deactivate a weight in the C
 Dropouts were used to decrease overfitting and help remove dead weights during training.
 
 Here is a summary of our final model:
-
+The total number of parameters in this model is equal to the number of trainable parameters, which will not be the case with transfer learning.
 ![Model 1 Summary](img/modelsummary.jpg)
 
 
@@ -55,7 +55,11 @@ F1 Score = 2*(Recall * Precision) / (Recall + Precision)
 Where TP = True positives, FP = false positives, FN = false negatives, TN = true negatives.
 These metrics for our model are shown below.
 
-The next step will be to read about different transfer learning models and evaluate which one will be best for our application.
+![Classification Report 1](img/classificationreport1.jpg)
+
+![Classification Report 2](img/classificationreport2.jpg)
+
+The next step will be to evaluate which transfer learning will be best for our application.
 
 ## Unsupervised Learning Models
 ### Dealing with the data
