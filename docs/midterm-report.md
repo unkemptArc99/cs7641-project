@@ -45,3 +45,41 @@ But before we could move onto capturing patterns from this data OR calculating e
 - Because of using a for-loop, this step became excruciatingly slow. To calculate intra-breed errors of 130 breeds, the algorithm deployed on a Google Colab instance took 4.5 hours to complete. With this, we realized that performing such an analysis for inter-breed error calculation will be very time consuming.
 
 With the above 2 problems, it was clear that there is a desperate need of feature engineering OR feature reduction that will need to be performed on the datset before we can continue on our journey to image clustering goal.
+
+### Model 2 - Maybe CV can save us? (KMeans using SIFT descriptors)
+
+Since there was a need of feature reduction, we turned to the idea of detecting features in image. Subsequently, Computer Vision algorithms came to our mind. There are multiple image feature descriptors (as has been outlined in this great OpenCV documentation - https://docs.opencv.org/4.x/db/d27/tutorial_py_table_of_contents_feature2d.html). Choosing the correct one becomes an important descision. Knowing not much about Computer Vision, we were struck by the SIFT (Scale-Invariant Feature Transform) descriptors. As you may recall from our initial warning about the dataset, we need to reshape OR rescale our dataset images to a standard scaling in order to compare images and their features for unsupervised learning algorithms. Having SIFT saves our assumption of caring about, how scale changes the accuracy of the dataset. Hence, SIFT immediately became a strong choice for the model.
+
+#### SIFT (Scale-Invariant Feature Transform)
+We will not go into immense details on how SIFT works and how it detects each features (frankly, we ourselves are not an expert at CV, but were a bit mesmerized by how the math works behind it). But we still want to give the reader a brief description of what SIFT needs as an input and what it gives us as an output. The reader can treat the SIFT algorithm as a blackbox, as long as he/she understands what is gained from applying such an algorithm.
+
+In essence, the SIFT algorithm takes in an image and gives us a list of key descriptors (could be corners in the image, straight lines, normal patterns, etc.) for the image. It calculates these descriptors in a 4-step process (https://docs.opencv.org/4.x/da/df5/tutorial_py_sift_intro.html) and then these descriptors can be used to match another image using a feature matching algorithm (can be as basic as applying sum-squared function).
+
+Our goal is to take these descriptors and use it as a feature set for our KMeans algorithm
+
+#### The Warmup
+To test our theory of whether SIFT image descriptors could help us with our image clustering, we took a sample dataset of three breeds out of the Stanford Dog Dataset and applied our model to the images classified in these 3 breeds. Since we were facing a lot of performance issues and memory issuess in our first model, this time we chose to run our model on GPUs, which also meant a steep learning curve on PyTorch.
+
+In the end, having had some inkling of how to interact with PyTorch tensors, we finally built a small warm-up model. Our model performs the following -
+1. Uses the PyTorch Dataloader functionality to lazy-load the image dataset into batches of 32 images.
+2. Then applies the SIFT Feature Descriptor algorithm on them to extract features from them.
+3. Compiles these Feature Descriptor into a one big tensor.
+4. This big tensor is then put through the Scikit's KMeans algorithm implementation as Numpy arrays.
+
+Using these three breeds as our initial dataset, here is what we came up with -
+![3-breed_SIFT_gray_KMeans](img/3-breed_SIFT_gray_KMeans.png)
+
+As you can see the accuracy is not really great. Although the positive point is that it is able to get the highest accuracy in the right number of clusters. This is definitely a positive sign. So, we started adapting our model to perform this matching on the whole Stanford dogs dataset.
+
+#### But, Problems again...
+While trying to apply this model on the whole Stanford Dogs Dataset, we again ran into issues where the combined tensor of the feature descriptors could not be loaded into the memory. This has been a great road-block for us, and now we are thinking of other ways to tackle this problem.
+
+### What's Next? - Techniques and Models 
+
+One big problem that we have been dealing with is the memory issue. Our next steps to tackle this problem are as follows -
+1. Investigate if we can save tensors to disk storage and then load them for unsupervised learning algorithms.
+2. Investigate into creating or finding an unsupervised learning algorithm which can work on batch dataset. This will help us segment the whole datset into batches and then apply the algorithm on these batches.
+
+Also, after learning about Neural Networks (NN) and Convolutional Neural Networks (CNN) in the class, we have come up with an idea of 2 other models -
+1. Using NN as our unsupervised learning algorithm, where we change the activation function to a regression function in the last layer which gives us a vector of the result of passing an image through the NN.
+2. Using CNN (or just the convolutional part) for feature reduction on images, and then using the same with normal unsupervised learning algorithms.
