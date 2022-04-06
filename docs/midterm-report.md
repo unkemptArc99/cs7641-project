@@ -83,3 +83,12 @@ One big problem that we have been dealing with is the memory issue. Our next ste
 Also, after learning about Neural Networks (NN) and Convolutional Neural Networks (CNN) in the class, we have come up with an idea of 2 other models -
 1. Using NN as our unsupervised learning algorithm, where we change the activation function to a regression function in the last layer which gives us a vector of the result of passing an image through the NN.
 2. Using CNN (or just the convolutional part) for feature reduction on images, and then using the same with normal unsupervised learning algorithms.
+
+## References
+1. https://datascience.stackexchange.com/questions/48642/how-to-measure-the-similarity-between-two-images
+2. http://slazebni.cs.illinois.edu/spring17/lec09_similarity.pdf
+3. https://towardsdatascience.com/image-clustering-implementation-with-pytorch-587af1d14123
+4. https://riptutorial.com/scipy/example/20970/image-manipulation-using-scipy--basic-image-resize-
+5. https://docs.opencv.org/4.x/dc/dc3/tutorial_py_matcher.html
+6. https://docs.opencv.org/4.x/da/df5/tutorial_py_sift_intro.html
+7. https://docs.opencv.org/4.x/db/d27/tutorial_py_table_of_contents_feature2d.html
