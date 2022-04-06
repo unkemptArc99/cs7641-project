@@ -32,7 +32,7 @@ Dropouts were used to decrease overfitting and help remove dead weights during t
 
 Here is a summary of our final model:
 
-![ModelParameters](img/model summary.jpg)
+![Model 1 Summary](img/model summary.jpg)
 
 
 #### Tweaking the model and hyperparameters
