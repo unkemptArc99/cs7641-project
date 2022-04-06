@@ -3,10 +3,10 @@ title: Comparing Image Clustering/Classification performance between Supervised 
 ---
 
 ## Overview
-### Background
-
+### Introduction and Background
+Our project revolves around identifying the breeds of dogs in images. There will be two aspects to the project: classifying dog breeds with an input image using a neural network, and using unsupervised learning algorithms to cluster dogs based on image features. The former project already can be done well provided there is sufficient training data, but a main goal of ours is to create a unique algorithm in the latter part that is comparable to the supervised learning algorithm. Our dataset contains images of multiple dog breeds, along with their corresponding breed and if they were originally used as training data, testing data, or validation data.
 ### Problem Definition
-
+The purpose of this project is to investigate the effectiveness of methods we are learning in class with classifying dog breeds. In particular, we wish to compare standard supervised methods in their accuracy and efficiency to unsupervised methods relying on feature creation using the input images.
 
 ## Data Exploration and Cleaning
 
