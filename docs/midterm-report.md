@@ -18,8 +18,8 @@ To approach the problem, we used public datasets provided by Stanford and Tsingh
 _Variation in Stanford Dogs dataset. Border collie and English springer_
 
 
-
 ### Data Cleaning
+Since we found datasets that have text labels with different spaces and capitalizations, we needed to clean texts and make the labels uniform. We needed to get rid of the spaces and capital letters involved. To do so, we converted the text labels into an excel spreadsheet and preprocessed the labels.
 
 ## Supervised Learning Models
 Methods 
