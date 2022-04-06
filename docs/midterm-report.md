@@ -32,11 +32,13 @@ Dropouts were used to decrease overfitting and help remove dead weights during t
 
 Here is a summary of our final model:
 
-![Model 1 Summary](img/model summary.jpg)
+![Model 1 Summary](img/modelsummary.jpg)
 
 
 #### Tweaking the model and hyperparameters
 The initial image dimensions were 224x224x3. With these images, we first constructed a 2 layer model which gave us an accuracy of ~11% before starting to overfit. When 3 layers were added, the accuracy was around ~13%. With 4 layers we were able to raise the accuracy to 20% before seeing overfitting. With 5 layers there was overfitting around 17%. We understood that accuracy is not the most useful metric to evaluate the model, so we only used it for some preliminary testing to figure out optimal number of layers and dimensions and augmentations of images that would give best results. The final model’s performance against test data was evaluated using the metrics precision, recall, and f1 score.
+
+![Model 1 Result](img/modelaccuracy.jpg)
 
 #### Results and Discussion 
 To preprocess our data, we used OpenCV. Once we figured out that the optimal number of layers was four, we resized the images to different dimensions to see which would give the best results. We also needed to perform one hot encoding before feeding the data into the model. We found that scaling down the images by a factor of 0.4 increased our accuracy to ~47% before starting to over-fit.
