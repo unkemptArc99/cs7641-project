@@ -10,13 +10,14 @@ The purpose of this project is to investigate the effectiveness of methods we ar
 
 ## Data Exploration and Cleaning
 ### Data Exploration 
-To approach the problem, we used public datasets provided by Stanford and Tsinghua. The Stanford dataset consists of a total 20580 number of dog pictures for 120 breeds of dogs. The below figure shows a sample type of dog breed.  
+To approach the problem, we used public datasets provided by Stanford and Tsinghua. The Stanford dataset consists of a total 20580 number of dog pictures for 120 breeds of dogs. The below figure shows a sample type of dog breed. Tsinghua dataset consists of a total 70428 number of dog pictures for 130 breeds of dogs. Tsinghua dog data annotated bounding boxes of the dog’s head and body in each image, which is useful for learning algorithms and testing. 
+
 ![Bordercollie](img/Bordercollie.png)
 ![Englishspringer](img/Englishspringer.png)
 
 _Variation in Stanford Dogs dataset. Border collie and English springer_
 
-Tsinghua dataset consists of a total 70428 number of dog pictures for 130 breeds of dogs. Tsinghua dog data annotated bounding boxes of the dog’s head and body in each image, which is useful for learning algorithms and testing. 
+
 
 ### Data Cleaning
 
