@@ -22,16 +22,28 @@ _Variation in Stanford Dogs dataset. Border collie and English springer_
 Since we found datasets that have text labels with different spaces and capitalizations, we needed to clean texts and make the labels uniform. We needed to get rid of the spaces and capital letters involved. To do so, we converted the text labels into an excel spreadsheet and preprocessed the labels.
 
 ## Supervised Learning Models
-Methods 
-describe cnns and do calculations for number of parameters
+### Method 1
+For Method 1 we decided to implement a convolutional neural network with the Kaggle dataset. The CNN we created has 4 different types of layers:
+Convolutional Layer: This layer consists of a number of filters which pick up different types of features. Each filter steps through the whole image and learns a feature such as shape of a dog's ear.
+Pooling Layer: It is used to take large arrays and shrink them down. Max pooling takes the max value of pixels over a region and average pooling takes the average value.
+Dense or Flatten Layer: This layer converts the input array into a 1-dimensional array, where each value is a probability of the image belonging to a certain class.
+Activation functions are used to either activate or deactivate a weight in the CNN. The most popular one for CNNs is ReLU or some variation of it. 
+Dropouts were used to decrease overfitting and help remove dead weights during training.
 
-Results and Discussion 
+#### Tweaking the model and hyperparameters
+The initial image dimensions were 224x224x3. With these images, we first constructed a 2 layer model which gave us an accuracy of ~11% before starting to overfit. When 3 layers were added, the accuracy was around ~13%. With 4 layers we were able to raise the accuracy to 20% before seeing overfitting. With 5 layers there was overfitting around 17%. We understood that accuracy is not the most useful metric to evaluate the model, so we only used it for some preliminary testing to figure out optimal number of layers and dimensions and augmentations of images that would give best results. The final model’s performance against test data was evaluated using the metrics precision, recall, and f1 score.
 
-All groups should have their dataset cleaned at this point (justification for why we didnt need cleaning)
+#### Results and Discussion 
+To preprocess our data, we used OpenCV. Once we figured out that the optimal number of layers was four, we resized the images to different dimensions to see which would give the best results. We also needed to perform one hot encoding before feeding the data into the model. We found that scaling down the images by a factor of 0.4 increased our accuracy to ~47% before starting to over-fit.
+The metrics used to evaluate the model are:
+Accuracy = TP+TN/TP+FP+FN+TN
+Precision = TP/TP+FP
+Recall = TP/TP+FN
+F1 Score = 2*(Recall * Precision) / (Recall + Precision)
+Where TP = True positives, FP = false positives, FN = false negatives, TN = true negatives.
+These metrics are shown below.
 
-We expect to see data pre-processing in your project such as feature selection (Forward or backward feature selection, dimensionality reduction methods such as PCA, Lasso, LDA, .. ), taking care of missing features in your dataset, ... (data augmentation to prevent overfitting, balance dataset to get even results across breeds)
-
-We expect to see at least one supervised or unsupervised method implemented and the results need to be studied in details. For example evaluating your predictive model performance using different metrics (take a look at ML Metrics) 
+The next step will be to read about different transfer learning models and evaluate which one will be best for our application.
 
 ## Unsupervised Learning Models
 ### Dealing with the data
