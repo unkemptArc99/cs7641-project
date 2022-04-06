@@ -37,7 +37,7 @@ So, we started by calculating the errors within images of the same breed, and se
 2. Perform a `O(N^2)` for-loop for finding errors between each images.
 3. Plot a boxplot of these errors in order to visualize them.
 
-The results of these boxplots of the 130 breeds in the Stanford dataset can be seen here - https://drive.google.com/drive/folders/1eDCdK_ckpxzjd9K4ZXuoDaNJ2Rzcztu8?usp=sharing. The average error of all the breeds can be seen in this image (values are normalized to a scale of 0-1) -
+The results of these boxplots of the 120 breeds in the Stanford dataset can be seen here - https://drive.google.com/drive/folders/1eDCdK_ckpxzjd9K4ZXuoDaNJ2Rzcztu8?usp=sharing. The average error of all the breeds can be seen in this image (values are normalized to a scale of 0-1) -
 ![avgError](img/avgError.png)
 
 But before we could move onto capturing patterns from this data OR calculating errors between images of different breeds, we ran into some of the problems, which we explain in the next sub-section.
