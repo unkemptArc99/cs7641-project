@@ -32,6 +32,7 @@ Dropouts were used to decrease overfitting and help remove dead weights during t
 
 Here is a summary of our final model:
 The total number of parameters in this model is equal to the number of trainable parameters, which will not be the case with transfer learning.
+
 ![Model 1 Summary](img/modelsummary.jpg)
 
 
