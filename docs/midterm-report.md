@@ -37,7 +37,8 @@ So, we started by calculating the errors within images of the same breed, and se
 2. Perform a `O(N^2)` for-loop for finding errors between each images.
 3. Plot a boxplot of these errors in order to visualize them.
 
-The results of these boxplots of the 130 breeds in the Stanford dataset can be seen here -
+The results of these boxplots of the 130 breeds in the Stanford dataset can be seen here - https://drive.google.com/drive/folders/1eDCdK_ckpxzjd9K4ZXuoDaNJ2Rzcztu8?usp=sharing. The average error of all the breeds can be seen in this image -
+![avgError](img/avgError.png)
 
 But before we could move onto capturing patterns from this data OR calculating errors between images of different breeds, we ran into some of the problems, which we explain in the next sub-section.
 #### Problems
@@ -92,3 +93,4 @@ Also, after learning about Neural Networks (NN) and Convolutional Neural Network
 5. https://docs.opencv.org/4.x/dc/dc3/tutorial_py_matcher.html
 6. https://docs.opencv.org/4.x/da/df5/tutorial_py_sift_intro.html
 7. https://docs.opencv.org/4.x/db/d27/tutorial_py_table_of_contents_feature2d.html
+8. https://medium.com/data-breach/introduction-to-feature-detection-and-matching-65e27179885d
