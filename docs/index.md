@@ -126,6 +126,8 @@ There is definitely inaccuracies with the results. Here is an example - The clus
 
 {% include image.html url="img/inaccurate.png" description="Inaccuracies in KMeans Clustering prediction" %}
 
+As you can see a Miniature Poodle has been inaccurately clustered with Tibetan Mastiff. Knowing the fact that Tibetan Mastiff are normally huge dogs compared to Poodles, you might say how could this even happen. But if you look closely, from the perspective of this image, the poodle has similar characteristics to the mastiff. Hence, it makes sense for this clustering.
+
 But, the KMeans model has also overwhelmingly predicted accurate results with images that have different characteristics - different colors, different posture, different positioning, etc. For example -
 
 {% include image.html url="img/accurate.png" description="Accurate KMeans Clustering" %}
