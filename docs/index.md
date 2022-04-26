@@ -1,5 +1,5 @@
 ---
-title: Comparing Image Clustering/Classification performance between Supervised and Unsupervised Learning models using Dog Breed Image dataset
+title: Image Clustering and Classification using Dog Breed Image dataset
 youtubeId: aQi4CUArJYM
 ---
 - [Proposal Report](https://unkemptArc99.github.io/cs7641-project/proposal-report)
