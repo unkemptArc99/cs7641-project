@@ -18,6 +18,29 @@ The purpose of this project is to investigate the effectiveness of methods we ar
 ## Supervised Learning Models
 
 ## Unsupervised Learning Models
+When we proposed the idea in our proposal report, we had a very small and noble goal of clustering images and comparing performance against supervised classification. But as we went along with our idea, the goal became harder and harder because of the enormity of the data involved in the clustering. We started with brief experiments of using the whole image as the input data for clustering algorithms (which did not turn out to be a good idea for obvious reason) and then also tried to use traditional feature extraction algorithms from Computer Vision (which did not have good performance metrics). But at last we are confident that we have come up with something comparable to supervised classification models.
+
+**Motivation -** It is very important to first understand the motivation behind such an exercise. Why the need of clustering images, when classification works well? We must understand that, every problem about images is not just classifying images into particular categories. Sometimes, you might just want to group similar images together in order to form a rudimentary grouping for your problem. Hence, image clustering iss also an essential technique in data processing. There are traditional Computer Vision algorithms, which will provide you key descriptors and matches between images (like SIFT, SURF, BRIEF, etc.). But when the data is large, these algorithms are not as fast or memory-efficient (as one might infer from our experiments in the midterm report). Hence, a new approach is required, and here is our exercise in finding the same.
+
+### Feature Extraction
+Images are the **worst** dataset elements to deal with. Too much information - 3 color channels, information about each pixels, etc. Too much inconsistency - different sizes, different reesolutions, etc. And a ton of memory requirement when processing images. Worst news - there aren't many batch processing unsupervised algorithms - as unsupervised algorithms are designed to extract information out of the data that is presented. Batch algorithms are necessarily not that great at doing that. So, we need something that can compress/comvert/summarize the image into a compact vector of information.
+
+It is so paradoxical that we would be comparing our results against a supervised model, and our inspiration to get features out of an image is based on a supervised algorithm. So, here goes - Imagine instead of classification Convolutional Neural Networks (CNNs) actually classifying images, they give us a bunch of features! I remembered how Prof. Mahdi told off-handedly in the class on how we could simply modify the last layer of any Neural Network, converting the output to the needs of the problem. This idea struck me, and hence, instead of using a sigmoid activation function in the last layer for classification, I replaced it with an identity function to provide me the features (or neuron outputs) that form the basis of the classification decision. The selection of these neuron outputs is essential as they make up a huge chunk of the decision of classification. These features will definitely be able to form a basis of the similarity analysis that goes into unsupervised clustering algorithms.
+
+We chose ResNet models to be our base for the feature extraction. We have trialed three different ResNet models - ResNet18, ResNet34, ResNet50. We first chose a pre-trained model of all the above three models (which is readily available from the PyTorch library). Then we went on to train our set of images on the model to update the parameters. We chose a train-validate-test split of 70%,10%,20% out of the whole Tsinghua Dog Dataset. The train and validation datasets were used to train the ResNet models. The test dataset was used for clustering algorithms, that we will discuss in the further sections. The trained models were then modified to serve as feature extraction models, by modifying the last layer of each model to an identity layer. The resulting models are available here for use - https://gtvault-my.sharepoint.com/:f:/g/personal/asharma756_gatech_edu/ErVYpyAQsPhCiIGdQe6BQdwBxVrM8eJm0PFNkeSW7b751Q?e=B5CGoC
+
+Each of our ResNet model gave us 512 features for each images. We first started thinking about whether we could reduce a few features from the given set. Principal Component Analysis (PCA) is the first algorithm that came to our mind. PCA tends to work better where variance between features are maximised. To determine whether we could do that, we plotted a correlation matrix between all our 512 features. Here is the result that we got for our models -
+
+{% include image.html url="img/Corr_Resnet18.png" description="Correlation Matrix of Features derived from ResNet18 model" %}
+{% include image.html url="img/Corr_Resnet34.png" description="Correlation Matrix of Features derived from ResNet34 model" %}
+{% include image.html url="img/Corr_Resnet50.png" description="Correlation Matrix of Features derived from ResNet50 model" %}
+
+Please feel free to open the images in a new tab, or go directly to the Github repository. The images are high-resolution, but can't be displayed well on the Github pages.
+
+As you might observe, there is not much correlation between the features. Reducing features may lose information. Hence, we chose the decision to move forward with the untouched features.
+
+### Applying clustering on the extracted features
+
 
 ## Results and Discussion
 
