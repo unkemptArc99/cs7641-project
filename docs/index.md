@@ -32,10 +32,54 @@ The below figure shows a sample type of dog breed.
 _Variation in Stanford Dogs dataset. Border collie and English springer_
 
 ### Data Cleaning
-Since we found datasets that have text labels with different spaces and capitalizations, we needed to clean texts and make the labels uniform. We needed to get rid of the spaces and capital letters involved. To do so, we converted the text labels into an excel spreadsheet and preprocessed the labels.
+Since we found datasets that have text labels with different spaces and capitalizations, we needed to clean texts and make the labels uniform. We needed to get rid of the spaces and capital letters involved. To do so, we converted the text labels into an excel spreadsheet and preprocessed the labels. 
 
 ## Supervised Learning Models
 
+### Model 1
+
+For Method 1 we decided to implement a convolutional neural network for the Kaggle dataset. The CNN we created has 4 different types of layers: Convolutional Layer: This layer consists of a number of filters which pick up different types of features. Each filter steps through the whole image and learns a feature such as shape of a dog’s ear. Pooling Layer: It is used to take large arrays and shrink them down. Max pooling takes the max value of pixels over a region and average pooling takes the average value. Dense or Flatten Layer: This layer converts the input array into a 1-dimensional array, where each value is a probability of the image belonging to a certain class. Activation functions are used to either activate or deactivate a weight in the CNN. The most popular one for CNNs is ReLU or some variation of it. Dropouts were used to decrease overfitting and help remove dead weights during training.
+
+#### Model 1 Data Preprocessing
+
+To preprocess our data, we used OpenCV. Once we figured out that the optimal number of layers was four, we resized the images to different dimensions to see which would give the best results. Through experimentation we realized that the best interpolation to use was INTER_LINEAR. We found that scaling down the images by a factor of 0.4 increased our accuracy to ~47% before starting to over-fit. We also needed to perform one hot encoding before feeding the data into the supervised learning model. Since completing the midterm report, we also applied data augmentations in the form of rotations to our dataset. This significantly improved our results.
+
+Here is a summary of our model from the midterm: 
+
+![Model 1 Summary](img/modelsummary.jpg)
+
+Here is a summary of the final model:
+
+![Final Model Summary](img/final_model_summary.jpg)
+
+As we can see, the final model has more parameters because we added more convolutions filters and increased the sizes of some of the filters.
+
+#### Tweaking the model and hyperparameters
+
+The initial image dimensions were 224x224x3. With these images, we first constructed a 2 layer model which gave us an accuracy of ~11% before starting to overfit. When 3 layers were added, the accuracy was around ~13%. With 4 layers we were able to raise the accuracy to 20% before seeing overfitting. With 5 layers there was overfitting when accuracy reached 17%. Through experimentation, we found that sizing the images down to 90x90x3 with INTER_LINEAR interpolation gave us the best results. We also applied data augmentations in the form of random rotations to improve the performance of the model. We also increased the number of convolutional filters. Between the midterm and now, the accuracy of the model increased from 45% to 60%! This was significant because the dataset only had 80 to 190 images per dog breed. We understood that accuracy is not the most useful metric to evaluate the model, so we only used it for some preliminary testing to figure out optimal number of layers and dimensions of images that would give best results. The final model’s performance against test data was evaluated using the metrics precision, recall, and f1 score. 
+
+Here is the result of training of the model from the midterm report:
+
+![Model 1 Result](img/finalaccuracy.jpg)
+
+The metrics used to evaluate the model are:
+
+Accuracy = TP+TN/TP+FP+FN+TN
+
+Precision = TP/TP+FP
+
+Recall = TP/TP+FN
+
+F1 Score = 2*(Recall * Precision) / (Recall + Precision)
+
+Where TP = True positives, FP = false positives, FN = false negatives, TN = true negatives. These metrics for our model from the midterm are shown below.
+
+![Classification Report 1](img/classificationreport1.jpg)
+
+![Classification Report 2](img/classificationreport2.jpg)
+
+
+The next step will be to evaluate which transfer learning will be best for our application.
 ## Unsupervised Learning Models
 When we proposed the idea in our proposal report, we had a very small and noble goal of clustering images and comparing performance against supervised classification. But as we went along with our idea, the goal became harder and harder because of the enormity of the data involved in the clustering. We started with brief experiments of using the whole image as the input data for clustering algorithms (which did not turn out to be a good idea for obvious reasons) and then tried to use traditional feature extraction algorithms from Computer Vision (which did not have good performance metrics). However, at last we are confident that we have come up with something comparable to supervised classification models.
 
