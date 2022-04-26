@@ -27,7 +27,7 @@ Images are the **worst** dataset elements to deal with. There's too much informa
 
 It is almost paradoxical that we would be comparing our results against a supervised model, and our inspiration to get features out of an image is based on a supervised algorithm. So, here goes - imagine instead of using Convolutional Neural Networks (CNNs) to classify images, we use them to give us a bunch of features! We remembered how Prof. Mahdi told off-handedly in the class on how we could simply modify the last layer of any Neural Network, converting the output to the needs of the problem. This idea struck us, and hence, instead of using a sigmoid activation function in the last layer for classification, we replaced it with an identity function to provide me the features (or neuron outputs) that form the basis of the classification decision. The selection of these neuron outputs is essential as they make up a huge chunk of the decision of classification. These features will definitely be able to form a basis for the similarity analysis that goes into unsupervised clustering algorithms.
 
-We chose ResNet models to be our base for the feature extraction. We have trialed three different ResNet models - ResNet18, ResNet34, ResNet50. We first chose a pre-trained model of all the above three models (which is readily available from the PyTorch library). Then we went on to train our set of images on the model to update the parameters. We chose a train-validate-test split of 70%,10%,20% out of the whole Tsinghua Dog Dataset. The train and validation datasets were used to train the ResNet models. The test dataset was used for clustering algorithms, which we will discuss in a future section. The trained models were then modified to serve as feature extraction models, by modifying the last layer of each model to an identity layer. The resulting models are available here for use - https://gtvault-my.sharepoint.com/:f:/g/personal/asharma756_gatech_edu/ErVYpyAQsPhCiIGdQe6BQdwBxVrM8eJm0PFNkeSW7b751Q?e=B5CGoC
+We chose ResNet models to be our base for the feature extraction. We have trialed three different ResNet models - ResNet18, ResNet34, ResNet50. We first chose a pre-trained model of all the above three models (which is readily available from the PyTorch library). Then we went on to train our set of images on the model to update the parameters. We chose a train-validate-test split of 70%,10%,20% out of the whole Tsinghua Dog Dataset. The train and validation datasets were used to train the ResNet models. The test dataset was used for clustering algorithms, which we will discuss in a future section. The trained models were then modified to serve as feature extraction models, by modifying the last layer of each model to an identity layer. The resulting models are available [here](https://gtvault-my.sharepoint.com/:f:/g/personal/asharma756_gatech_edu/ErVYpyAQsPhCiIGdQe6BQdwBxVrM8eJm0PFNkeSW7b751Q?e=B5CGoC) for use.
 
 Each of our ResNet models gave us 512 features for each image. We first started thinking about whether we could reduce a few features from the given set. Principal Component Analysis (PCA) is the first algorithm that came to our mind. PCA tends to work better where variance between features are maximised. To determine whether we could do that, we plotted a correlation matrix between all our 512 features. Here is the result that we got for our models -
 
@@ -39,13 +39,25 @@ Please feel free to open the images in a new tab, or go directly to the Github r
 
 As you might observe, there is not much correlation between the features. Reducing features may lose information. Hence, we chose the decision to move forward with the untouched features.
 
+Finally, here is my final ResNet models.
+
+[ResNet18-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet18model.md)
+
+[ResNet34-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet34model.md)
+
+[ResNet50-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet50model.md)
 ### Applying clustering on the extracted features
 
 Now that we finally have our images summarized into a tabular format, we can now proceed with applying unsupervised clustering on the immages in order to get our results. So, the first question when we are starting here is what algoirthms to use, and what performance metrics are we looking at. Now, we have learned a few unsupervised algorithms in the class, and we chose to go with KMeans and Gaussian Mixture Models (GMM). The reason of the choice is simple - we want to compare it against the supervised learning models, where we are aware about the number of clusters that we require. The main problem of KMeans and GMM is that we are not exactly aware of how many clusters are required for grouping. But from our dataset, we know what is the amount of clusters that we need, hence, these 2 algorithms makes proper sense.
 
 For the performance metrics, we have gone with external measures like Mutual Info Score, Completeness Score, Rand Index, and Fowlkes Mallow Score. This is because, again, we can leverage our data to define the performance metrics base. We have not chosen to measure internal measures, as this will not make any sense while comparing the same to our supervised model.
 
+### KMeans on ResNet models & Results
+So, I performed KMeans on the features extracted from my ResNet models multiple times (~10-15 times), till I got the maximum accuracy. As you might know, depending on different initialization, you will get different results with KMeans. Here is the performance -
 
+{% include image.html url="img/kmeans_perf_resnet.png" description="" %}
+
+To be honest, this just showed the performance metrics of the base models. As the number of ResNet layers increase from 18 to 50, the scores also increase.
 ## Results and Discussion
 
 ## Final Presentation Video
