@@ -12,8 +12,27 @@ Our project revolves around identifying the breeds of dogs in images. We selecte
 The purpose of this project is to investigate the effectiveness of methods we are learning in class with classifying dog breeds. In particular, we wish to compare standard supervised learning methods in their accuracy and efficiency to our own methods utilizing unsupervised learning algorithms, which rely on feature creation using the input images.
 
 ## Datasets
+### Data Exploration
+To approach the problem, we used public datasets provided by Kaggle, Stanford, and Tsinghua. Each dataset consists of dog image files for a certain number of breeds of dogs.
+
+||Kaggle|Stanford|Tsinghua|
+|---|---|---|---|
+|Number of dog pictures|9346|20580|70428|
+|Number of breeds|70|120|130|
+
 1. [70 Dog Breeds Image dataset from Kaggle](https://www.kaggle.com/gpiosenka/70-dog-breedsimage-data-set)
 2. [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
+3. [Tsinghua Dogs Dataset](https://cg.cs.tsinghua.edu.cn/ThuDogs/)
+
+The below figure shows a sample type of dog breed.
+
+![Bordercollie](img/Bordercollie.png)
+![Englishspringer](img/Englishspringer.png)
+
+_Variation in Stanford Dogs dataset. Border collie and English springer_
+
+### Data Cleaning
+Since we found datasets that have text labels with different spaces and capitalizations, we needed to clean texts and make the labels uniform. We needed to get rid of the spaces and capital letters involved. To do so, we converted the text labels into an excel spreadsheet and preprocessed the labels.
 
 ## Supervised Learning Models
 
