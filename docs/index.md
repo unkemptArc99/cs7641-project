@@ -93,6 +93,10 @@ These metrics for our final model are shown below.
 
 ![Classification Report 2](img/final_cr_2.jpg)
 
+Here is the confusion Matrix for the Supervised Learning Model:
+
+![CM](img/final_confusion_matrix.jpg)
+
 ## Unsupervised Learning Models
 When we proposed the idea in our proposal report, we had a very small and noble goal of clustering images and comparing performance against supervised classification. But as we went along with our idea, the goal became harder and harder because of the enormity of the data involved in the clustering. We started with brief experiments of using the whole image as the input data for clustering algorithms (which did not turn out to be a good idea for obvious reasons) and then tried to use traditional feature extraction algorithms from Computer Vision (which did not have good performance metrics). However, at last we are confident that we have come up with something comparable to supervised classification models.
 
