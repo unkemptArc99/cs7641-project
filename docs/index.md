@@ -76,7 +76,12 @@ So, I performed KMeans on the features extracted from my ResNet models multiple 
 
 {% include image.html url="img/kmeans_perf_resnet.png" description="" %}
 
-To be honest, this just showed the performance metrics of the base models. As the number of ResNet layers increase from 18 to 50, the scores also increase.
+To be honest, this just showed the performance metrics of the base models. As the number of ResNet layers increase from 18 to 50, the scores also increase. 
+
+### GMM on ResNet models & Results
+Applying GMM on the extracted features also result in similar performance metrics. Here is the performance -
+
+{% include image.html url="img/gmm_perf_resnet.png" description="" %}
 ## Results and Discussion
 
 ## Final Presentation Video
