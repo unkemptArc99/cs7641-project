@@ -60,11 +60,11 @@ As you might observe, there is not much correlation between the features. Reduci
 
 Finally, here is my final ResNet models.
 
-[ResNet18-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet18model.md)
+[ResNet18-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet18model)
 
-[ResNet34-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet34model.md)
+[ResNet34-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet34model)
 
-[ResNet50-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet50model.md)
+[ResNet50-based Model Summary](https://unkemptArc99.github.io/cs7641-project/resnet50model)
 ### Applying clustering on the extracted features
 
 Now that we finally have our images summarized into a tabular format, we can now proceed with applying unsupervised clustering on the immages in order to get our results. So, the first question when we are starting here is what algoirthms to use, and what performance metrics are we looking at. Now, we have learned a few unsupervised algorithms in the class, and we chose to go with KMeans and Gaussian Mixture Models (GMM). The reason of the choice is simple - we want to compare it against the supervised learning models, where we are aware about the number of clusters that we require. The main problem of KMeans and GMM is that we are not exactly aware of how many clusters are required for grouping. But from our dataset, we know what is the amount of clusters that we need, hence, these 2 algorithms makes proper sense.

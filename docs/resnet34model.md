@@ -1,3 +1,4 @@
+[Go back](https://unkemptArc99.github.io/cs7641-project)
 ```
 ResNet(
   (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
