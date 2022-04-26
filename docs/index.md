@@ -78,11 +78,18 @@ So, I performed KMeans on the features extracted from my ResNet models multiple 
 
 To be honest, this just showed the performance metrics of the base models. As the number of ResNet layers increase from 18 to 50, the scores also increase. 
 
+There is definitely inaccuracies with the results. Here is an example - The cluster that I am going to show is for the "Tibetan Mastiff" breed. But any puffy dog is kind of similar to tibetan mastiff - it all depends on the perspective and zoom of the image of the dog. For example, here is an inaccuracy -
+
+{% include image.html url="img/inaccurate.png" description="Inaccuracies in KMeans Clustering prediction" %}
+
+But, the KMeans model has also overwhelmingly predicted accurate results with images that have different characteristics - different colors, different posture, different positioning, etc. For example -
+
+{% include image.html url="img/accurate.png" description="Accurate KMeans Clustering" %}
+
 ### GMM on ResNet models & Results
 Applying GMM on the extracted features also result in similar performance metrics. Here is the performance -
 
 {% include image.html url="img/gmm_perf_resnet.png" description="" %}
-## Results and Discussion
 
 ## Final Presentation Video
 
