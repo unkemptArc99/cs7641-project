@@ -133,9 +133,12 @@ But, the KMeans model has also overwhelmingly predicted accurate results with im
 {% include image.html url="img/accurate.png" description="Accurate KMeans Clustering" %}
 
 ### GMM on ResNet models & Results
-Applying GMM on the extracted features also result in similar performance metrics. Here is the performance -
+Applying GMM on the extracted features also result in similar performance metrics. Here is the performance graph -
 
 {% include image.html url="img/gmm_perf_resnet.png" description="" %}
+
+The image results are also same as KMeans, so no point in reiterating the same inaccuracies and accuracies.
+
 
 ## Final Presentation Video
 
@@ -151,3 +154,9 @@ Applying GMM on the extracted features also result in similar performance metric
 [4] Hsu, Alexander. “Unsupervised Learning for Investigating Animal Behaviors?” Medium, Medium, 15 Apr. 2020, https://medium.com/@ahsu2/unsupervised-learning-for-investigating-animal-behaviors-90ab645e8098. 
 
 [5] Huang, Jiabo, Qi Dong, Shaogang Gong, and Xiatian Zhu. "Unsupervised deep learning by neighbourhood discovery." In International Conference on Machine Learning, pp. 2849-2858. PMLR, 2019., [Paper link](https://arxiv.org/abs/1904.11567)
+
+[6] Transfer Learning for Computer Vision Tutorial, https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#transfer-learning-for-computer-vision-tutorial.
+
+[7] Using Keras’ Pre-trained Models for Feature Extraction in Image Clustering, https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1.
+
+[8] Image clustering with Keras and k-Means, https://shirinsplayground.netlify.app/2018/10/keras_fruits_cluster/.
