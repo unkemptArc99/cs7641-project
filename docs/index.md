@@ -52,10 +52,6 @@ Here is a summary of the final model:
 
 ![Final Model Summary](img/final_model_summary.jpg)
 
-Loss and Accuracy Plots of the Final Model:
-
-![Final Model Plots](img/loss_accuracy_plots.jpg)
-
 As we can see, the final model has more parameters because we added more convolutions filters and increased the sizes of some of the filters.
 
 #### Tweaking the model and hyperparameters
@@ -70,6 +66,10 @@ Here is the result from training the model from the midterm report:
 Here is the result from training the updated model:
 
 ![Final Model Result](img/final_model_accuracy.jpg)
+
+Loss and Accuracy Plots of the Final Model:
+
+![Final Model Plots](img/loss_accuracy_plots.jpg)
 
 The metrics used to evaluate the model are:
 
