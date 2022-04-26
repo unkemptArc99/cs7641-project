@@ -15,11 +15,9 @@ The purpose of this project is to investigate the effectiveness of methods we ar
 1. [70 Dog Breeds Image dataset from Kaggle](https://www.kaggle.com/gpiosenka/70-dog-breedsimage-data-set)
 2. [Stanford Dogs Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/)
 
-## Methods
+## Supervised Learning Models
 
-### Supervised Learning
-
-### Unsupervised Learning
+## Unsupervised Learning Models
 
 ## Results and Discussion
 
