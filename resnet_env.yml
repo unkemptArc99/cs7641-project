@@ -140,6 +140,7 @@ dependencies:
   - requests=2.27.1=pyhd3eb1b0_0
   - scikit-learn=1.0.2=py39h51133e4_1
   - scipy=1.7.3=py39hc147768_0
+  - seaborn=0.11.2=pyhd3eb1b0_0
   - send2trash=1.8.0=pyhd3eb1b0_1
   - setuptools=61.2.0=py39h06a4308_0
   - sip=4.19.13=py39h295c915_0
