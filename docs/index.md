@@ -48,6 +48,10 @@ Here is a summary of our model from the midterm:
 
 ![Model 1 Summary](img/modelsummary.jpg)
 
+Here is a summary of the final model:
+
+![Final Model Summary](img/final_model_summary.jpg)
+
 #### Tweaking the model and hyperparameters
 
 The initial image dimensions were 224x224x3. With these images, we first constructed a 2 layer model which gave us an accuracy of ~11% before starting to overfit. When 3 layers were added, the accuracy was around ~13%. With 4 layers we were able to raise the accuracy to 20% before seeing overfitting. With 5 layers there was overfitting when accuracy reached 17%. Through experimentation, we found that sizing the images down to 90x90x3 with INTER_LINEAR interpolation gave us the best results. We also applied data augmentations in the form of rotations to improve the performance of the model. We also increased the number of convolutional filters. Between the midterm and now, the accuracy of the model increased from 45% to 60%! This was significant because the dataset only had 80 to 190 images per dog breed. We understood that accuracy is not the most useful metric to evaluate the model, so we only used it for some preliminary testing to figure out optimal number of layers and dimensions of images that would give best results. The final model’s performance against test data was evaluated using the metrics precision, recall, and f1 score. 
