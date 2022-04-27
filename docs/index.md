@@ -1,6 +1,6 @@
 ---
 title: Image Clustering and Classification using Dog Breed Image dataset
-youtubeId: aQi4CUArJYM
+youtubeId: M-bpCFOTI5o
 ---
 - [Proposal Report](https://unkemptArc99.github.io/cs7641-project/proposal-report)
 - [Midterm Report](https://unkemptArc99.github.io/cs7641-project/midterm-report)
