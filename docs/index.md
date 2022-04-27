@@ -177,12 +177,12 @@ From the above points, we can see that our unsupervised models are definitely wo
 
 [3] N. Manohar, Y. H. Sharath Kumar and G. H. Kumar, "Supervised and unsupervised learning in animal classification," 2016 International Conference on Advances in Computing, Communications and Informatics (ICACCI), 2016, pp. 156-161, doi: 10.1109/ICACCI.2016.7732040.
 
-[4] Hsu, Alexander. “Unsupervised Learning for Investigating Animal Behaviors?” Medium, Medium, 15 Apr. 2020, https://medium.com/@ahsu2/unsupervised-learning-for-investigating-animal-behaviors-90ab645e8098. 
+[4] Hsu, Alexander. “Unsupervised Learning for Investigating Animal Behaviors?” Medium, Medium, 15 Apr. 2020, [Article Link](https://medium.com/@ahsu2/unsupervised-learning-for-investigating-animal-behaviors-90ab645e8098).
 
 [5] Huang, Jiabo, Qi Dong, Shaogang Gong, and Xiatian Zhu. "Unsupervised deep learning by neighbourhood discovery." In International Conference on Machine Learning, pp. 2849-2858. PMLR, 2019., [Paper link](https://arxiv.org/abs/1904.11567)
 
-[6] Transfer Learning for Computer Vision Tutorial, https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#transfer-learning-for-computer-vision-tutorial.
+[6] Transfer Learning for Computer Vision Tutorial, [Article link](https://pytorch.org/tutorials/beginner/transfer_learning_tutorial.html#transfer-learning-for-computer-vision-tutorial).
 
-[7] Using Keras’ Pre-trained Models for Feature Extraction in Image Clustering, https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1.
+[7] Using Keras’ Pre-trained Models for Feature Extraction in Image Clustering, [Article Link](https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1).
 
-[8] Image clustering with Keras and k-Means, https://shirinsplayground.netlify.app/2018/10/keras_fruits_cluster/.
+[8] Image clustering with Keras and k-Means, [Article Link](https://shirinsplayground.netlify.app/2018/10/keras_fruits_cluster/).
