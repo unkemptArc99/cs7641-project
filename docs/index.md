@@ -36,11 +36,11 @@ Since we found datasets that have text labels with different spaces and capitali
 
 ## Supervised Learning Models
 
-### Model 1
+### CNN Model
 
 For Method 1 we decided to implement a convolutional neural network for the Kaggle dataset. The CNN we created has 4 different types of layers: Convolutional Layer: This layer consists of a number of filters which pick up different types of features. Each filter steps through the whole image and learns a feature such as shape of a dog’s ear. Pooling Layer: It is used to take large arrays and shrink them down. Max pooling takes the max value of pixels over a region and average pooling takes the average value. Dense or Flatten Layer: This layer converts the input array into a 1-dimensional array, where each value is a probability of the image belonging to a certain class. Activation functions are used to either activate or deactivate a weight in the CNN. The most popular one for CNNs is ReLU or some variation of it. Dropouts were used to decrease overfitting and help remove dead weights during training.
 
-#### Model 1 Data Preprocessing
+#### CNN Data Preprocessing
 
 To preprocess our data, we used OpenCV. Once we figured out that the optimal number of layers was four, we resized the images to different dimensions to see which would give the best results. Through experimentation we realized that the best interpolation to use was INTER_LINEAR. We found that scaling down the images by a factor of 0.4 increased our accuracy to ~47% before starting to over-fit. We also needed to perform one hot encoding before feeding the data into the supervised learning model. Since completing the midterm report, we also applied data augmentations in the form of random rotations to our dataset. This significantly improved our results.
 
