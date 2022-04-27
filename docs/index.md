@@ -187,4 +187,6 @@ From the above points, we can see that our unsupervised models are definitely wo
 
 [8] Image clustering with Keras and k-Means, [Article Link](https://shirinsplayground.netlify.app/2018/10/keras_fruits_cluster/).
 
-[9]A Comprehensive Guide to Convolutional Neural Networks, [Article Link](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53).
+[9] A Comprehensive Guide to Convolutional Neural Networks, [Article Link](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53).
+
+[10] Data Augmentation Techniques using OpenCV, [Article Link](https://medium.com/analytics-vidhya/data-augmentation-techniques-using-opencv-657bcb9cc30b)
