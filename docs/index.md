@@ -144,6 +144,15 @@ Applying GMM on the extracted features also result in similar performance metric
 
 The image results are also same as KMeans, so no point in reiterating the same inaccuracies and accuracies.
 
+### Overall Results and Discussion on Unsupervised Learning Models
+
+- Both KMeans and GMM resulted in high Rand Index score. This shows that there is a huge similarity between our ground truth "clusters" (or the classes/breeds) and the predicted clustering through the models. This definitely shows that our models have definitely been accurate.
+- But you would now argue as to why the Fowlkes-Mallows inde (FMI) (which also compares the similarity of two clusters) is so low, when the model seems so accurate. Well, this is because unlike Rand Index, FMI penalizes wrong classification much heavier than how Rand Index penalizes it. Rand Index is simply a percentage of True Positives and True Negatives out of the whole dataset. But FMI also takes into account of False Positives and False Negatives in its calculation. Hence, the lower FMI score.
+- Both Completeness Score (CS) and Normalized Mututal Info (NMI) Score are based on the homogeneity (how much an image in a cluster is similar to other images in the cluster), and completeness (how many similar images are clustered together). Since the similarity in their measurement, you can see that they have pretty similar values as well. A good CS values shows the model has many similar images in the same cluster. Our completeness scores are hovering around 70%. This means that our model has definitely done a decent job of clustering correct images in the correct cluster.
+- For the NMI score (which also hovers around 70%), this also shows that our model has good homeogeneity within the clustering (as NMI is sensitive to both completeness and homogeneity - specifically, it is the harmonic mean of both).
+
+From the above points, we can see that our unsupervised models are definitely working very well for our image clustering exercise. This project definitely shows us that if we are not interested about concrete classification, and want to measure similarities between our images, image clustering can definitely help us in the case.
+
 
 ## Final Presentation Video
 
