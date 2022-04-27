@@ -189,4 +189,10 @@ From the above points, we can see that our unsupervised models are definitely wo
 
 [9] A Comprehensive Guide to Convolutional Neural Networks, [Article Link](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53).
 
-[10] Data Augmentation Techniques using OpenCV, [Article Link](https://medium.com/analytics-vidhya/data-augmentation-techniques-using-opencv-657bcb9cc30b)
+[10] Data Augmentation Techniques using OpenCV, [Article Link](https://medium.com/analytics-vidhya/data-augmentation-techniques-using-opencv-657bcb9cc30b).
+
+[11] 70 Dog Breeds-Image Data Set, [Dataset Link](https://www.kaggle.com/gpiosenka/70-dog-breedsimage-data-set).
+
+[12] Stanford Dogs Dataset, [Dataset Link](http://vision.stanford.edu/aditya86/ImageNetDogs/).
+
+[13] Tsinghua Dogs Dataset, [Dataset Link](https://cg.cs.tsinghua.edu.cn/ThuDogs/).
