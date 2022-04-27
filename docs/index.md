@@ -115,7 +115,7 @@ Each of our ResNet models gave us 512 features for each image. We first started 
 {% include image.html url="img/Corr_Resnet34.png" description="Correlation Matrix of Features derived from ResNet34 model" %}
 {% include image.html url="img/Corr_Resnet50.png" description="Correlation Matrix of Features derived from ResNet50 model" %}
 
-Please feel free to open the images in a new tab, or go directly to the Github repository. The images are high-resolution, but can't be displayed well on the Github pages.
+**NOTE**: Please feel free to open the images in a new tab, or go directly to the Github repository. The images are high-resolution, but can't be displayed well on the Github pages.
 
 As you might observe, there is not much correlation between the features. Reducing features may lose information. Hence, we chose the decision to move forward with the untouched features.
 
