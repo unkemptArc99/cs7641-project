@@ -196,3 +196,11 @@ From the above points, we can see that our unsupervised models are definitely wo
 [12] Stanford Dogs Dataset, [Dataset Link](http://vision.stanford.edu/aditya86/ImageNetDogs/).
 
 [13] Tsinghua Dogs Dataset, [Dataset Link](https://cg.cs.tsinghua.edu.cn/ThuDogs/).
+
+[14] Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng Yao and Li Fei-Fei. Novel dataset for Fine-Grained Image Categorization. First Workshop on Fine-Grained Visual Categorization (FGVC), IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2011. [Paper Link](https://people.csail.mit.edu/khosla/papers/fgvc2011.pdf)
+
+[15] J. Deng, W. Dong, R. Socher, L.-J. Li, K. Li and L. Fei-Fei, ImageNet: A Large-Scale Hierarchical Image Database. IEEE Computer Vision and Pattern Recognition (CVPR), 2009. [Paper Link](http://www.image-net.org/papers/imagenet_cvpr09.pdf)
+
+[16] Zou, DN., Zhang, SH., Mu, TJ. et al. A new dataset of dog breed images and a benchmark for finegrained classification. Comp. Visual Media 6, 477–487 (2020). [Paper Link](https://doi.org/10.1007/s41095-020-0184-6)
+
+
