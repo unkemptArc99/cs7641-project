@@ -186,3 +186,5 @@ From the above points, we can see that our unsupervised models are definitely wo
 [7] Using Keras’ Pre-trained Models for Feature Extraction in Image Clustering, [Article Link](https://franky07724-57962.medium.com/using-keras-pre-trained-models-for-feature-extraction-in-image-clustering-a142c6cdf5b1).
 
 [8] Image clustering with Keras and k-Means, [Article Link](https://shirinsplayground.netlify.app/2018/10/keras_fruits_cluster/).
+
+[9]A Comprehensive Guide to Convolutional Neural Networks, [Article Link](https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53).
